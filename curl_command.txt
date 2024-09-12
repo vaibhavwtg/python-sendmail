@@ -1,0 +1,15 @@
+curl -X POST http://localhost:5000/send-email \
+    -H "Content-Type: application/json" \
+    -d '{
+        "tenant_id": "your-tenant-id",
+        "client_id": "your-client-id",
+        "client_secret": "your-client-secret",
+        "user_id": "user_id_or_email@domain.com",
+        "from_email": "sender@example.com",
+        "to": "recipient@example.com",
+        "cc": ["cc1@example.com", "cc2@example.com"],
+        "bcc": ["bcc@example.com"],
+        "subject": "Test Email with Multiple CCs",
+        "body": "This email includes multiple CC recipients.",
+        "attachments": ["path/to/attachment1.pdf"]
+    }'
